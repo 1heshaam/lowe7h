@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saudi License Plate Generator</title>
-    <style>
+<style>
     * {
         box-sizing: border-box;
     }
@@ -30,10 +24,10 @@
     }
 
     input, button, select {
-        padding: 10px;
-        font-size: 16px;
-        flex: 1 1 150px;
-        min-width: 100px;
+        padding: 5px 8px;       /* Smaller padding */
+        font-size: 12px;        /* Smaller text */
+        flex: 1 1 100px;        /* Still responsive */
+        min-width: 80px;        /* Allow it to shrink nicely */
     }
 
     #canvas {
@@ -46,8 +40,8 @@
 
     @media (max-width: 480px) {
         input, button, select {
-            font-size: 14px;
-            padding: 8px;
+            font-size: 11px;
+            padding: 4px 6px;
         }
 
         #controls {
@@ -56,20 +50,3 @@
         }
     }
 </style>
-
-</head>
-<body>
-    <div id="controls">
-        <select id="plateFormat" name="plateFormat" aria-label="Select Plate Format">
-            <option value="black.json">Black Palm</option>
-            <option value="ola.json">Ola</option>
-        </select>
-        <input type="text" id="plateInput" placeholder="Enter plate text" maxlength="7">
-        <button id="generateButton">Generate Plate</button>
-    </div>
-    <canvas id="canvas" width="512" height="256"></canvas>
-
-    <!-- Link the external JavaScript file -->
-    <script src="script.js"></script>
-</body>
-</html>
