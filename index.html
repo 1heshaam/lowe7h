@@ -5,35 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saudi License Plate Generator</title>
     <style>
-        body {
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: rgb(68, 64, 64); /* Light background to make the canvas stand out */
-        }
+    * {
+        box-sizing: border-box;
+    }
 
-        #canvas {
-            border: 1px solid #ccc; /* Adds a border to make the canvas more visible */
-            width: 100%;
-            max-width: 800px; /* Constrain max size for better visibility */
-            height: auto;
-            background-color: white; /* Ensure the canvas background is white */
-            margin-top: 20px;
+    body {
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(68, 64, 64);
+        font-family: sans-serif;
+    }
+
+    #controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 800px;
+    }
+
+    input, button, select {
+        padding: 10px;
+        font-size: 16px;
+        flex: 1 1 150px;
+        min-width: 100px;
+    }
+
+    #canvas {
+        border: 1px solid #ccc;
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        background-color: white;
+    }
+
+    @media (max-width: 480px) {
+        input, button, select {
+            font-size: 14px;
+            padding: 8px;
         }
 
         #controls {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
+            flex-direction: column;
+            align-items: stretch;
         }
+    }
+</style>
 
-        input, button, select {
-            padding: 10px;
-            font-size: 16px;
-        }
-    </style>
 </head>
 <body>
     <div id="controls">
